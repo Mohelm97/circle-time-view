@@ -193,7 +193,7 @@ public class CircleTimeView extends View {
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             if (msg.what == TIMER_HANDLER_MESSAGE_WHAT) {
-                if (mCurrentTimeInSeconds > 0) {
+                if (mCurrentTimeInSeconds >= 0) {
                     // Decrease time for a second
                     mCurrentTimeInSeconds++;
                     setCurrentTime(mCurrentTimeInSeconds, mTimeFormat);
